@@ -1,0 +1,14 @@
+{
+	"manifest_version": 2,
+	"name": "formunlock",
+	"description": "Automatically switch to the right Google account for filling out a form",
+	"version": "1.0",
+	"content_scripts": [{
+		"matches": ["https://docs.google.com/forms/d/e/*/formrestricted"],
+        "all_frames": true,
+		"js": ["unlock_redirect.js"]
+	}],
+	"permissions": [
+		"activeTab"
+	]
+}
